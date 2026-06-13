@@ -1,0 +1,29 @@
+{
+  "name": "ticklogic-agent-integrations",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Runnable examples: govern a Claude tool-use agent and an MCP server with @nzengi/ticklogic-sdk on Solana devnet.",
+  "scripts": {
+    "setup": "tsx src/setup.ts",
+    "claude": "tsx src/claude.ts",
+    "mcp": "tsx src/mcp.ts",
+    "x402": "tsx src/x402.ts",
+    "squads": "tsx src/squads.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@nzengi/ticklogic-sdk": "^0.0.4",
+    "@solana/spl-token": "^0.4.8",
+    "@solana/web3.js": "^1.95.0",
+    "@sqds/multisig": "^2.1.4",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}

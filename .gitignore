@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# build output (published to npm; rebuilt with `npm run build`)
+dist/
+
+# logs / debug
+*.log
+npm-debug.log*
+
+# packed tarballs
+*.tgz
+
+# env / secrets — never commit
+.env
+.env.*
+
+# editor / OS
+.DS_Store
+.idea/
+.vscode/

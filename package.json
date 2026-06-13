@@ -1,0 +1,36 @@
+{
+  "name": "@nzengi/ticklogic-sdk",
+  "version": "0.0.4",
+  "description": "Mandate-aware signer shim + instruction builders for the TickLogic mandate-gate (Solana). Wrap your agent's value-moving path; the chain holds the receipt and the bond.",
+  "keywords": ["solana", "ai-agents", "agent-authorization", "mandate", "fraud-proof", "x402"],
+  "license": "MIT",
+  "homepage": "https://github.com/nzengi/ticklogic-ts#readme",
+  "repository": { "type": "git", "url": "https://github.com/nzengi/ticklogic-ts.git" },
+  "bugs": { "url": "https://github.com/nzengi/ticklogic-ts/issues" },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx test/layout.parity.ts && tsx test/sdk.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "buffer": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
